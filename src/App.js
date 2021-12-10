@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import { ErrorBoundary } from 'react-error-boundary';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
+import FaklandiaRouter from './routes/FaklandiaRouter';
+import ErrorFallback from './fallback/ErrorFallback';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <BrowserRouter>
+        <FaklandiaRouter />
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 
