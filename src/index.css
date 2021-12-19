@@ -1,3 +1,9 @@
+:root {
+  --theme-colour: #8f87d8;
+  --theme-color-text: #3d3a58;
+  --theme-colour-alt: #92b3d1;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,44 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  color: var(--theme-color-text);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--theme-colour);
+}
+
+.nav-menu__container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--theme-colour);
+}
+
+.nav-menu__button {
+  background-color: var(--theme-colour-alt);
+  padding: 0.2em;
+  text-align: center;
+  border: 2px solid var(--theme-colour);
+  width: 100%;
+}
+
+@media only screen and (min-width:600px) {
+  .nav-menu__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
 }

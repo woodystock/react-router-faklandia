@@ -1,15 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
 import Confess from './Confess'
-import FaklandiaHome from './FaklandiaHome'
+import Home from './Home'
 import InvalidPath from './InvalidPath'
 import Misdemeaners from './Misdemeanours'
-import FaklandiaLayout from '../layouts/FaklandiaLayout'
+import MainLayout from '../layouts/MainLayout'
 
 const FaklandiaRouter = () => {
     return (
         <Routes>
-            <Route path="/" element={<FaklandiaLayout />} >
-                <Route index element={<FaklandiaHome />} />
+            <Route path="/" element={<MainLayout />} >
+                <Route index element={<Home />} />
                 <Route path="/Misdemeanours" element={<Misdemeaners />} />
                 <Route path="/Confess" element={<Confess />} />
                 <Route path="*" element={<InvalidPath />} />
