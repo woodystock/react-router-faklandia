@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,10 +19,10 @@ code {
     monospace;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+.main-layout {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 
 .header {
@@ -31,12 +32,14 @@ ul {
 }
 
 .header__container {
+  flex: 0 1 auto;
   display: flex;
   justify-content: space-between;
   background-color: var(--theme-colour);
 }
 
 .nav-menu__container {
+  flex: 0 1 auto;
   display: flex;
   flex-direction: column;
   border: 2px solid var(--theme-colour);
@@ -44,10 +47,27 @@ ul {
 
 .nav-menu__button {
   background-color: var(--theme-colour-alt);
-  padding: 0.2em;
   text-align: center;
   border: 2px solid var(--theme-colour);
   width: 100%;
+}
+
+.outlet__container {
+  background-color: turquoise;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.footer{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(235, 195, 64);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--theme-colour);
+  color: white;
 }
 
 @media only screen and (min-width:600px) {
