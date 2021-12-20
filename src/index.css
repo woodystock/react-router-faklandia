@@ -1,7 +1,8 @@
 :root {
   --theme-colour: #8f87d8;
-  --theme-color-text: #3d3a58;
-  --theme-colour-alt: #92b3d1;
+  --theme-color-text: #e5e4eb;
+  --theme-colour-alt: #e5e4eb;
+  --theme-colour-alt-text: #8f87d8;
 }
 
 body {
@@ -52,10 +53,32 @@ code {
   width: 100%;
 }
 
-.outlet__container {
-  background-color: turquoise;
-  flex: 1 1 auto;
-  height: 100%;
+.active {
+  background-color: var(--theme-colour);
+  color: var(--theme-color-text);
+}
+
+.m-table {
+  
+}
+
+.m-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  
+}
+
+.m-header-row {
+  background-color: var(--theme-colour-alt);
+  color: var(--theme-colour-alt-text);
+}
+
+.m-cell {
+}
+
+.m-header {
+  font-size: 4vw;
 }
 
 .footer{
@@ -67,13 +90,17 @@ code {
   left: 0;
   width: 100%;
   background-color: var(--theme-colour);
-  color: white;
+  color: var(--theme-color-text);
 }
 
 @media only screen and (min-width:600px) {
   .nav-menu__container {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .misdemeanours-header {
+    font-size: 20px;
   }
   
 }
