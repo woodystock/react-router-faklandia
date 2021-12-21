@@ -21,6 +21,10 @@ code {
     monospace;
 }
 
+.uppercase {
+	text-transform: uppercase;
+}
+
 .main-layout {
   display: flex;
   flex-flow: column;
@@ -98,6 +102,10 @@ code {
 
 .m-image {
   width: 50%;
+}
+
+.m-emoji {
+  font-size: 1.5em;
 }
 
 .confess__container {

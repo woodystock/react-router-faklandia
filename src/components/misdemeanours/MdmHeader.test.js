@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { types } from '../generate_misdemeanours';
+import { types } from '../../generate_misdemeanours';
 import MdmHeader from './MdmHeader';
 
 test('renders header for misdemeanours table', () => {

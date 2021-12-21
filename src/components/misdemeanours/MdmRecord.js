@@ -3,15 +3,15 @@ const MdmRecord = ({misdemeanour}) => {
          // types = [ 'rudeness', 'vegetables', 'lift', 'united' ];
         switch(misdemeanour) {
             case "rudeness":
-                return <p>🤪</p>;
+                return <p className="m-emoji">🤪</p>;
             case "vegetables":
-                return <p>🥗</p>;
+                return <p className="m-emoji">🥗</p>;
             case "lift":
-                return <p>🗣</p>;
+                return <p className="m-emoji">🗣</p>;
             case "united":
-                return <p>😈</p>;
+                return <p className="m-emoji">😈</p>;
             default:
-                return <p>⏱</p>
+                return <p className="m-emoji">⏱</p>
         }
      }
 
@@ -32,7 +32,7 @@ const MdmRecord = ({misdemeanour}) => {
             </div>
             <div className="m-cell">
                 {getMisdemeanourEmoji(misdemeanour.misdemeanour)}
-                {misdemeanour.misdemeanour}
+                <p className="uppercase">{misdemeanour.misdemeanour}</p>
             </div>
             <div className="m-cell">
                 <img className="m-image" src={getRandomImageUrl()} alt="Location of desired punishment" />

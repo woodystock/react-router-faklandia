@@ -1,6 +1,6 @@
 export const types = [ 'rudeness', 'vegetables', 'lift', 'united' ];
 
-function rand(x){
+export function rand(x){
     return Math.random() * x;
 }
 
