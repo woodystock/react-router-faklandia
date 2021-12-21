@@ -1,15 +1,31 @@
+import { useEffect, useState } from "react"
+import MdmHeader from "../components/MdmHeader";
+import MdmTable from "../components/MdmTable";
+import generateMisdemeanours, { types } from "../generate_misdemeanours";
+
 const Misdemeaners = () => {
+
+    const [misdemeanours, setMisdemeanours] = useState([]);
+    const [error, setError] = useState();
+    const [filter, setFilter] = useState("");
+
+    const fetchMisdemeanours = async () => {
+        try{
+            const response = await generateMisdemeanours(20);
+            setMisdemeanours(response);
+        }
+        catch( error ) {
+            setError(error);
+        }
+    }
+
+    useEffect(() => {
+        fetchMisdemeanours();
+    }, []);
+
     return ( <div className="m-table">
-                <div className="m-row m-header-row">
-                    <div className="m-cell"><h2 className="misdemeanours-header">Citizen Id</h2></div>
-                    <div className="m-cell"><h2 className="misdemeanours-header">Date</h2></div>
-                    <div className="m-cell"><h2 className="misdemeanours-header">
-                        Misdemeanour
-                        <select>
-                            <option>WTF?</option>
-                        </select></h2></div>
-                    <div className="m-cell"><h2 className="misdemeanours-header">Punishment Idea</h2></div>
-                </div>
+                <MdmHeader filter={filter} setFilter={setFilter}/>
+                <MdmTable misdemeanours={misdemeanours} filter={filter} />
             </div>
     )
 }

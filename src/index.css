@@ -49,8 +49,10 @@ code {
 .nav-menu__button {
   background-color: var(--theme-colour-alt);
   text-align: center;
+  font-size: 2.0rem;
   border: 2px solid var(--theme-colour);
   width: 100%;
+
 }
 
 .active {
@@ -65,7 +67,6 @@ code {
 .m-row {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
   
 }
 
@@ -74,11 +75,23 @@ code {
   color: var(--theme-colour-alt-text);
 }
 
+.m-header-cell {
+  width:25%;
+  border-left: 4px solid var(--theme-colour);
+}
+
 .m-cell {
+  width: 25%;
+  border-bottom: 1px dashed black;
+  font-size: 2vw;
 }
 
 .m-header {
-  font-size: 4vw;
+  font-size: 3vw;
+}
+
+.m-select {
+  width: 100%;
 }
 
 .footer{
@@ -99,7 +112,11 @@ code {
     justify-content: space-around;
   }
 
-  .misdemeanours-header {
+  .m-header {
+    font-size: 20px;
+  }
+
+  .m-cell {
     font-size: 20px;
   }
   
