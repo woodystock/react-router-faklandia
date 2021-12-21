@@ -6,7 +6,7 @@ import { MisdemeanersContext } from "../context/MisdemeanoursContext";
 
 const Misdemeaners = () => {
 
-    const [misdemeanours, error] = useContext(MisdemeanersContext);
+    const [misdemeanours, setMisdemeanours, error] = useContext(MisdemeanersContext);
     const [filter, setFilter] = useState("");
 
     return ( <div className="m-table">

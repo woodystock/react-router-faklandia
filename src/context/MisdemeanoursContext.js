@@ -23,7 +23,7 @@ export const MisdemeanersProvider = ({children}) => {
     }, [setMisdemeanours]);
 
     return (
-        <MisdemeanersContext.Provider value={[misdemeanours, error]}>
+        <MisdemeanersContext.Provider value={[misdemeanours, setMisdemeanours, error]}>
             {children}
         </MisdemeanersContext.Provider>
     )

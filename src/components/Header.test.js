@@ -1,10 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from './Header';
 
 test('renders webiste header', () => {
-  render(<App />);
+  render(<Header />);
   const siteTitle = screen.getByText(/Faklandia Justice Department/i);
   expect(siteTitle).toBeInTheDocument();
 });
-
-
