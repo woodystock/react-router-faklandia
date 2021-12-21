@@ -1,33 +1,11 @@
-import { useContext, useState } from "react";
-import { MisdemeanersContext } from "../../context/MisdemeanoursContext";
-import { rand, types } from "../../generate_misdemeanours"
+import { useState } from "react";
+import { types } from "../../generate_misdemeanours";
+import { validateFormData } from "../../validation/form_validation";
 import ConfessionInput from "./ConfessionInput";
 import ConfessReasonCombo from "./ConfessReasonCombo";
 import ConfessSubjectInput from "./ConfessSubjectInput";
 
-const ConfessForm = () => {
-
-    const [misdemeanours, setMisdemeanours] = useContext( MisdemeanersContext );
-
-    const [formData, setFormData] = useState({
-        subject:"",
-        reason:"",
-        confession:""
-    });
-
-    const validateFormData = () => {
-        if( formData.subject === "" )
-            return false;
-
-        if( formData.reason === "")
-            return false;
-        
-        if( formData.confession.length < 20)
-            return false;
-        
-        return true;
-    } 
-
+const ConfessForm = ({formData, setFormData, onSubmit}) => {
 
     const inputChangeHandler = (event) => {
         setFormData((prevFormData) => {
@@ -39,28 +17,8 @@ const ConfessForm = () => {
 
     const confessSubmitHandler = (event) => {
         event.preventDefault();
-        if(formData.reason === "talk")
-            console.log(formData);
-        else {
-            setMisdemeanours((prevMisdemeanours) => {
-                const misdemeanour = {
-                    citizenId: Math.floor((rand(37) * rand(967))),
-                    misdemeanour: formData.reason,
-                    date: new Date().toLocaleDateString(),
-                    confession: formData.subject + " - " + formData.confession
-                }
-                return [...prevMisdemeanours, misdemeanour]
-            })
-
-            
-        }
         
-
-        setFormData({
-            subject:"",
-            reason:"",
-            confession:""
-        });
+        onSubmit(formData);
     }
 
 
@@ -70,7 +28,7 @@ const ConfessForm = () => {
                     <ConfessReasonCombo value={formData.reason} onChangeHandler={inputChangeHandler}/>
                     <ConfessionInput value={formData.confession} onChangeHandler={inputChangeHandler}/>
                     <button 
-                        disabled={! validateFormData()} 
+                        disabled={! validateFormData(formData)} 
                         className="form-button"
                         type="submit">
                             Confess
