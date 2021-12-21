@@ -16,7 +16,7 @@ const MdmRecord = ({misdemeanour}) => {
      }
 
      const getRandomImageUrl = () => {
-        const randSize = 100 + Math.floor( (Math.random() * 100));
+        const randSize = 100 + misdemeanour.citizenId % 100;
 
         return "https://picsum.photos/" + randSize  + "/" + randSize + "/";
      } 
@@ -35,7 +35,7 @@ const MdmRecord = ({misdemeanour}) => {
                 {misdemeanour.misdemeanour}
             </div>
             <div className="m-cell">
-                <img className="m-image" src={getRandomImageUrl()} />
+                <img className="m-image" src={getRandomImageUrl()} alt="Location of desired punishment" />
             </div>
         </div>
     )
