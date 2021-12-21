@@ -57,12 +57,28 @@ code {
   font-size: 2.0rem;
   border: 2px solid var(--theme-colour);
   width: 100%;
-
 }
 
 .active {
   background-color: var(--theme-colour);
   color: var(--theme-color-text);
+}
+
+.home-heading {
+  font-size: 4vw;
+}
+
+.home-img {
+  width: 40%;
+}
+
+.home-stats-container {
+  display: flex;
+  padding: 10px;
+}
+
+.stats-container {
+  margin: 0.5em;
 }
 
 .m-table {
@@ -106,6 +122,12 @@ code {
 
 .m-emoji {
   font-size: 1.5em;
+}
+
+.loading-container {
+  font-size: 2.0em;
+  text-align: center;
+  padding: 2em;
 }
 
 .confess__container {

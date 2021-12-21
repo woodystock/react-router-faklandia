@@ -8,7 +8,7 @@ const MdmHeader = ({filter, setFilter}) => {
                     <div className="m-header-cell">
                         <select id="m-select" onChange={(event) => {
                             setFilter(event.target.value)
-                        }} value={filter} className="m-select">
+                        }} value={filter} className="m-select m-header">
                             <option key="type-all" value="">view all</option>
                             {types.map((type, index) => <option key={"type-" + index} value={type}>
                                 {type}
