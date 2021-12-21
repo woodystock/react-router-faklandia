@@ -1,4 +1,4 @@
-import { types } from "../generate_misdemeanours"
+import { types } from "../../generate_misdemeanours"
 
 const MdmHeader = ({filter, setFilter}) => {
     return (

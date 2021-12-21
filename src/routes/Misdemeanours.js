@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
-import ErrorMessage from "../components/ErrorMessage";
-import MdmHeader from "../components/MdmHeader";
-import MdmTable from "../components/MdmTable";
+import ErrorMessage from "../components/misdemeanours/ErrorMessage";
+import MdmHeader from "../components/misdemeanours/MdmHeader";
+import MdmTable from "../components/misdemeanours/MdmTable";
 import { MisdemeanersContext } from "../context/MisdemeanoursContext";
 
 const Misdemeaners = () => {

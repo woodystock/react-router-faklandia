@@ -13,6 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--theme-colour-alt);
 }
 
 code {
@@ -67,6 +68,7 @@ code {
 .m-row {
   display: flex;
   justify-content: space-between;
+  background-color: white;
   
 }
 
@@ -98,6 +100,48 @@ code {
   width: 50%;
 }
 
+.confess__container {
+  width: 50%;
+  margin: auto;
+  padding: 2em;
+  background-color: white;
+}
+
+.confess-form {
+  width: 100%;
+  margin: auto;
+  align-content: center;
+}
+
+.confess-info {
+  font-size: 1.5em;
+}
+
+.input-text {
+  font-size: 1.5rem;
+}
+
+.input-box {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.input-textarea {
+  width: 100%;
+}
+
+.form-button {
+  font-size: 1.5rem;
+  width: 50%;
+  margin: auto;
+}
+
 .footer{
   margin-top: 1rem;
   padding: 1rem;
@@ -122,5 +166,13 @@ code {
 
   .m-cell {
     font-size: 20px;
+  }
+
+  .input-box {
+    width: 70%;
+  }
+
+  .input-container {
+    flex-flow: row;
   }
 }
