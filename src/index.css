@@ -94,6 +94,10 @@ code {
   width: 100%;
 }
 
+.m-image {
+  width: 50%;
+}
+
 .footer{
   margin-top: 1rem;
   padding: 1rem;
@@ -119,5 +123,4 @@ code {
   .m-cell {
     font-size: 20px;
   }
-  
 }

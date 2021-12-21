@@ -3,17 +3,23 @@ const MdmRecord = ({misdemeanour}) => {
          // types = [ 'rudeness', 'vegetables', 'lift', 'united' ];
         switch(misdemeanour) {
             case "rudeness":
-                return <>🤪</>;
+                return <p>🤪</p>;
             case "vegetables":
-                return <>🥗</>;
+                return <p>🥗</p>;
             case "lift":
-                return <>🗣</>;
+                return <p>🗣</p>;
             case "united":
-                return <>😈</>;
+                return <p>😈</p>;
             default:
-                return <>⏱</>
+                return <p>⏱</p>
         }
      }
+
+     const getRandomImageUrl = () => {
+        const randSize = 100 + Math.floor( (Math.random() * 100));
+
+        return "https://picsum.photos/" + randSize  + "/" + randSize + "/";
+     } 
 
 
     return (
@@ -29,7 +35,7 @@ const MdmRecord = ({misdemeanour}) => {
                 {misdemeanour.misdemeanour}
             </div>
             <div className="m-cell">
-                <img src='https://picsum.photos/100/100' />
+                <img className="m-image" src={getRandomImageUrl()} />
             </div>
         </div>
     )
